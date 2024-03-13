@@ -8,14 +8,15 @@ jobs:
     runs-on: ubuntu-22.04
     container:
       image: httptoolkit/act-build-base:v3.0.0
-      options: "--privileged" # Required for DIND tests
+      options: '--privileged' # Required for DIND tests
     env:
       DIND_HOST: unix:///tmp/docker.sock
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 20.8.0
+          node-version: 20.11.1
+
       - run: npm install -g npm@^8
       - run: npm ci
         env:
@@ -25,6 +26,9 @@ jobs:
         run: |
           # Fix annoying Yarn issue: https://github.com/yarnpkg/yarn/issues/7866
           curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+          # Ditto but for Google:
+          curl -sL https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+
           sudo apt-get update
           sudo apt-get install -y p7zip-full xterm
           wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.12.2-amd64.deb
@@ -52,7 +56,7 @@ jobs:
           if-no-files-found: error
   publish:
     name: Publish a release
-    runs-on: "ubuntu-22.04"
+    runs-on: 'ubuntu-22.04'
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
     needs:
       - build
