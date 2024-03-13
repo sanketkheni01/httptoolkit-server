@@ -5,7 +5,7 @@ This repo contains the backend for [HTTP Toolkit](https://httptoolkit.tech), a b
 
 Looking to file bugs, request features or asend feedback? File an issue or vote on existing ones at [github.com/httptoolkit/httptoolkit](https://github.com/httptoolkit/httptoolkit).
 
-## What is this?
+## What is this? 
 
 HTTP Toolkit runs everything possible within [the web UI](https://github.com/httptoolkit/httptoolkit-ui), written as a standard single-page web application. There's a couple of necessary things you can't do in a web application though, especially:
 
