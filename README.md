@@ -3,7 +3,7 @@ HTTP Toolkit Server [![Build Status](https://github.com/httptoolkit/httptoolkit-
 
 This repo contains the backend for [HTTP Toolkit](https://httptoolkit.tech), a beautiful, cross-platform & open-source HTTP(S) debugging proxy, analyzer & client.
 
-Looking to file bugs, request features or asend feedback? File an issue or vote on existing ones at [github.com/httptoolkit/httptoolkit](https://github.com/httptoolkit/httptoolkit).
+Looking to file bugs, request features or asend feedback? File an issue or vote on existing ones at [github.com/httptoolkit/httptoolkit](https://github.com/httptoolkit/httptoolkit). 
 
 ## What is this? 
 
